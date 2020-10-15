@@ -147,7 +147,7 @@ public class LinkedList<E> {
     }
     /*
         PARAMS:
-            * E head -
+            * E head - value of head
         DESCRIPTION: reverses the LL from tail to head; throws exception if LL is empty
         RETURN: value at new head
     */
@@ -170,8 +170,14 @@ public class LinkedList<E> {
     }
 
     private static class Node<E> {
-        Node<E> next;
-        E value;
+        Node<E> next; //points to this node's next node
+        E value; //value of the node (type E -- can be any data type except primitives)
+        /*
+            PARAMS:
+                * E value - value to be stored within the node
+            DESCRIPTION: constructor; constructs a new node object; sets next to null and value to the value parameter
+            RETURN: none
+       */
         public Node(E value) {
             this.next = null;
             this.value = value;
